@@ -117,4 +117,12 @@ Project menggunakan tiga sound effect berikut:
 
 
 
+https://github.com/user-attachments/assets/5a50493f-5343-4f13-8bef-c85f10f736a8
+
+
+
+
+
+
+
 

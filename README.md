@@ -1,6 +1,9 @@
-# Flappy Bird — Java Swing
+# Flappy Bird 
 
-Project game **Flappy Bird** yang dibuat menggunakan **Java Swing** sebagai tugas praktikum. Pemain mengendalikan burung agar dapat melewati rintangan berupa pipa. Pemain memperoleh skor setiap berhasil melewati sepasang pipa dan permainan berakhir ketika burung menabrak pipa atau jatuh ke batas bawah layar.
+
+## Janji
+Saya Adinda Fildzah Hasya dengan NIM 2501218 mengerjakan Tugas Praktikum 6 pada Mata Kuliah Desain dan Pemrograman Berorientasi Objek (DPBO) untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin
+
 
 ## Fitur Permainan
 
@@ -16,14 +19,6 @@ Project game **Flappy Bird** yang dibuat menggunakan **Java Swing** sebagai tuga
 - **Sound effect** untuk lompatan, penambahan skor, dan tabrakan/Game Over.
 - **Tampilan visual khusus** untuk Main Menu, badge Score, dan panel Game Over.
 
-## Teknologi yang Digunakan
-
-- **Java** sebagai bahasa pemrograman.
-- **Java Swing** untuk antarmuka, antara lain `JFrame`, `JPanel`, `JLabel`, dan `JButton`.
-- **Java AWT/Java2D** untuk menggambar background, objek permainan, dan elemen visual.
-- **Java Timer** untuk menjalankan game loop dan kemunculan pipa secara berkala.
-- **Java Sound API** (`javax.sound.sampled`) untuk memainkan sound effect WAV.
-- **IntelliJ IDEA** sebagai IDE pengembangan.
 
 ## Struktur Project
 
@@ -40,7 +35,7 @@ repository/
 │   │   │   ├── upperPipe.png
 │   │   │   └── audio/
 │   │   │       ├── hit.wav
-│   │   │       ├── loncat.wav
+│   │   │       ├── flap.wav
 │   │   │       └── score.wav
 │   │   ├── App.java
 │   │   ├── AudioPlayer.java
@@ -52,17 +47,11 @@ repository/
 │   └── .gitignore
 │
 ├── Dokumentasi/
-│   ├── main_menu.png
-│   ├── gameplay.png
-│   ├── score.png
-│   ├── game_over.png
-│   ├── restart.png
-│   └── flappybird_demo.mp4
+│   └── FlappyBird.mp4
 │
 └── README.md
 ```
 
-Pastikan nama dan lokasi file aset sesuai dengan struktur tersebut. Folder `Dokumentasi/` diisi dengan screenshot dan video dari program yang benar-benar dijalankan. Jika nama file dokumentasi berbeda, sesuaikan nama file pada bagian Dokumentasi di bawah.
 
 ## Desain Program
 
@@ -118,77 +107,14 @@ Project menggunakan tiga sound effect berikut:
 
 | File audio | Penggunaan |
 |---|---|
-| `loncat.wav` | Diputar ketika pemain menekan `SPACE` untuk membuat burung melompat. |
+| `flap.wav` | Diputar ketika pemain menekan `SPACE` untuk membuat burung melompat. |
 | `score.wav` | Diputar ketika skor bertambah setelah burung melewati pipa. |
 | `hit.wav` | Diputar ketika burung menabrak pipa atau jatuh sehingga permainan berakhir. |
 
-## Cara Menjalankan Program
-
-1. Pastikan **JDK** sudah terpasang dan konfigurasi JDK pada IntelliJ IDEA sudah benar.
-2. Buka folder project `FlappyBird` melalui IntelliJ IDEA.
-3. Pastikan folder `src/assets/` beserta gambar dan folder `audio/` tersedia.
-4. Pastikan file audio menggunakan format WAV yang didukung Java Sound API.
-5. Buka `App.java`.
-6. Jalankan method `main()` melalui IntelliJ IDEA.
-7. Pada Main Menu, tekan **Play** untuk membuka permainan.
 
 ## Dokumentasi Program
 
-Tambahkan screenshot dan video hasil menjalankan program ke folder `Dokumentasi/`. Dokumentasi berikut digunakan untuk menunjukkan fitur yang telah diimplementasikan.
 
-### 1. Main Menu
 
-Simpan screenshot Main Menu sebagai `Dokumentasi/main_menu.png`.
 
-![Main Menu](Dokumentasi/main_menu.png)
 
-### 2. Gameplay
-
-Simpan screenshot ketika permainan sedang berlangsung sebagai `Dokumentasi/gameplay.png`.
-
-![Gameplay](Dokumentasi/gameplay.png)
-
-### 3. Score
-
-Simpan screenshot yang memperlihatkan skor setelah burung melewati pipa sebagai `Dokumentasi/score.png`.
-
-![Score](Dokumentasi/score.png)
-
-### 4. Game Over
-
-Simpan screenshot ketika permainan berakhir sebagai `Dokumentasi/game_over.png`.
-
-![Game Over](Dokumentasi/game_over.png)
-
-### 5. Restart
-
-Simpan screenshot setelah permainan berhasil diulang menggunakan tombol `R` sebagai `Dokumentasi/restart.png`.
-
-![Restart](Dokumentasi/restart.png)
-
-### 6. Video Demo
-
-Simpan rekaman demonstrasi permainan sebagai `Dokumentasi/flappybird_demo.mp4`. Video sebaiknya memperlihatkan Main Menu, gameplay, kontrol burung, penambahan skor, Game Over, restart, dan sound effect.
-
-[ Lihat Video Demo Flappy Bird ](Dokumentasi/flappybird_demo.mp4)
-
-> **Catatan dokumentasi:** Tambahkan file screenshot dan video dengan nama di atas agar gambar dan tautan dapat ditampilkan dengan benar pada GitHub. Gunakan hasil tangkapan dari program yang benar-benar dijalankan, bukan gambar ilustrasi.
-
-## Kredit Aset
-
-Aset gambar dan audio disimpan di dalam `FlappyBird/src/assets/`. Cantumkan nama pembuat dan tautan sumber sesuai halaman unduhan aset yang digunakan, serta periksa lisensi setiap aset sebelum repository dipublikasikan.
-
-- Background: `background.png`
-- Gambar burung: `bird.png`
-- Gambar pipa: `lowerPipe.png` dan `upperPipe.png`
-- Sound effect: `hit.wav`, `loncat.wav`, dan `score.wav`
-
-## Pengumpulan
-
-Sebelum mengumpulkan project:
-
-- Pastikan repository GitHub berstatus **Public**.
-- Gunakan nama repository sesuai format yang ditentukan pada modul praktikum: `TP6DPBO2526C...`.
-- Pastikan folder `FlappyBird/`, folder `Dokumentasi/`, dan file `README.md` tersedia pada branch default repository.
-- Pastikan screenshot dan video dokumentasi sudah ditambahkan.
-- Pastikan seluruh aset gambar dan audio yang diperlukan tersedia agar program dapat dijalankan.
